@@ -6,3 +6,5 @@ models/
 outputs/
 .venv/
 venv/
+.wiki-staging/
+_site/
