@@ -8,3 +8,14 @@ outputs/
 venv/
 .wiki-staging/
 _site/
+
+
+# Local Environment & Staging Security
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+.wiki-staging
+temp_*
