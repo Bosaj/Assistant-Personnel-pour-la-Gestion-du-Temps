@@ -1,5 +1,8 @@
 # Assistant-Personnel-pour-la-Gestion-du-Temps
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps) [![GitHub release](https://img.shields.io/github/v/release/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps?color=blue&label=release)](https://github.com/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps/releases) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+
+
 <p align="center">
   <img src="assets/social_preview.jpg" alt="Assistant-Personnel-pour-la-Gestion-du-Temps Banner" width="100%">
 </p>
