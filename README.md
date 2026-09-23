@@ -13,7 +13,6 @@
 
 ---
 
-![CI](https://github.com/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps/actions/workflows/ci.yml/badge.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Python](https://img.shields.io/badge/python-3.x-blue.svg)
 
@@ -72,7 +71,7 @@ jupyter notebook notebooks/
 
 ## Testing / CI
 
-[`.github/workflows/ci.yml`](.github/workflows/ci.yml) valide l'intégrité structurelle de tous les notebooks et vérifie la syntaxe de `environment_setup.py` à chaque push. L'entraînement complet nécessite le jeu de données ATUS (non fourni) et n'est donc pas exécuté en CI.
+[`.github/workflows/ci_qa_monitoring.yml`](.github/workflows/ci_qa_monitoring.yml) valide l'intégrité structurelle de tous les notebooks et vérifie la syntaxe de `environment_setup.py` à chaque push. L'entraînement complet nécessite le jeu de données ATUS (non fourni) et n'est donc pas exécuté en CI.
 
 ## Project Structure
 
