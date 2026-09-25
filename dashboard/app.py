@@ -6,11 +6,10 @@ is synthetic rather than the original ATUS extract, which isn't
 included in this repository) and generates an optimized 24-hour
 schedule live.
 """
-import json
+
 import sys
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 import streamlit as st
 
@@ -18,18 +17,26 @@ ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "notebooks"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from environment_setup import ScheduleEnv  # noqa: E402
-from dqn_agent import DQNAgent  # noqa: E402
+from dqn_agent import DQNAgent
+from environment_setup import ScheduleEnv
 
 DATA_PATH = ROOT / "data" / "synthetic_time_use.csv"
 WEIGHTS_PATH = ROOT / "model" / "dqn_weights.weights.h5"
 ACTIVITY_NAMES_PATH = ROOT / "model" / "activity_names.json"
 
 ACTIVITY_COLORS = {
-    "Sleeping": "#3b4a6b", "Personal Care": "#8ecae6", "Eating and Drinking": "#f4a261",
-    "Working": "#264653", "Household Activities": "#e9c46a", "Caring for Household Members": "#e76f51",
-    "Shopping": "#2a9d8f", "Socializing and Leisure": "#ff6f91", "Sports and Exercise": "#06d6a0",
-    "Education": "#118ab2", "Traveling / Commuting": "#adb5bd", "Religious and Volunteer Activities": "#9d4edd",
+    "Sleeping": "#3b4a6b",
+    "Personal Care": "#8ecae6",
+    "Eating and Drinking": "#f4a261",
+    "Working": "#264653",
+    "Household Activities": "#e9c46a",
+    "Caring for Household Members": "#e76f51",
+    "Shopping": "#2a9d8f",
+    "Socializing and Leisure": "#ff6f91",
+    "Sports and Exercise": "#06d6a0",
+    "Education": "#118ab2",
+    "Traveling / Commuting": "#adb5bd",
+    "Religious and Volunteer Activities": "#9d4edd",
 }
 
 
@@ -53,7 +60,7 @@ def generate_schedule(agent, env):
     activities = []
     for hour in range(24):
         action = agent.act(state, training=False)
-        next_state, reward, done, _ = env.step(action)
+        next_state, _reward, done, _ = env.step(action)
         activities.append(env.get_activity_name(action))
         state = next_state
         if done:
