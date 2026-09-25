@@ -5,6 +5,7 @@ Run: python scripts/generate_synthetic_data.py   (once, to create the data)
 
 Produces: model/dqn_weights.weights.h5, model/activity_names.json
 """
+
 import json
 import sys
 from pathlib import Path
@@ -17,8 +18,8 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "notebooks"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from environment_setup import ScheduleEnv  # noqa: E402
-from dqn_agent import DQNAgent  # noqa: E402
+from dqn_agent import DQNAgent
+from environment_setup import ScheduleEnv
 
 DATA_PATH = ROOT / "data" / "synthetic_time_use.csv"
 MODEL_DIR = ROOT / "model"
@@ -56,8 +57,10 @@ def main():
         rewards_history.append(total_reward)
         if episode % 25 == 0:
             avg_recent = np.mean(rewards_history[-25:])
-            print(f"Episode {episode}/{EPISODES}, reward={total_reward:.2f}, "
-                  f"avg(last 25)={avg_recent:.2f}, epsilon={agent.epsilon:.3f}")
+            print(
+                f"Episode {episode}/{EPISODES}, reward={total_reward:.2f}, "
+                f"avg(last 25)={avg_recent:.2f}, epsilon={agent.epsilon:.3f}"
+            )
 
     MODEL_DIR.mkdir(exist_ok=True)
     agent.save(MODEL_DIR / "dqn_weights.weights.h5")
@@ -66,7 +69,9 @@ def main():
     with open(MODEL_DIR / "activity_names.json", "w", encoding="utf-8") as f:
         json.dump(activity_names, f, indent=2)
 
-    print(f"\nTraining complete. Final avg reward (last 25 episodes): {np.mean(rewards_history[-25:]):.2f}")
+    print(
+        f"\nTraining complete. Final avg reward (last 25 episodes): {np.mean(rewards_history[-25:]):.2f}"
+    )
     print(f"Saved weights to {MODEL_DIR / 'dqn_weights.weights.h5'}")
     print(f"Saved activity name mapping to {MODEL_DIR / 'activity_names.json'}")
 

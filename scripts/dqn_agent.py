@@ -2,6 +2,7 @@
 reusable module so it can be shared between the training script and the
 Streamlit dashboard without duplicating code.
 """
+
 import random
 from collections import deque
 
@@ -21,7 +22,13 @@ class ReplayBuffer:
     def sample(self, batch_size):
         samples = random.sample(self.buffer, batch_size)
         states, actions, rewards, next_states, dones = zip(*samples)
-        return np.array(states), np.array(actions), np.array(rewards), np.array(next_states), np.array(dones)
+        return (
+            np.array(states),
+            np.array(actions),
+            np.array(rewards),
+            np.array(next_states),
+            np.array(dones),
+        )
 
     def size(self):
         return len(self.buffer)
@@ -46,12 +53,14 @@ class DQNAgent:
         self.update_target_model()
 
     def _build_model(self):
-        model = Sequential([
-            Flatten(input_shape=(self.state_size,)),
-            Dense(64, activation="relu"),
-            Dense(64, activation="relu"),
-            Dense(self.action_size, activation="linear"),
-        ])
+        model = Sequential(
+            [
+                Flatten(input_shape=(self.state_size,)),
+                Dense(64, activation="relu"),
+                Dense(64, activation="relu"),
+                Dense(self.action_size, activation="linear"),
+            ]
+        )
         model.compile(loss="mse", optimizer=Adam(learning_rate=self.learning_rate))
         return model
 
@@ -71,7 +80,9 @@ class DQNAgent:
         if self.memory.size() < self.batch_size:
             return
 
-        states, actions, rewards, next_states, dones = self.memory.sample(self.batch_size)
+        states, actions, rewards, next_states, dones = self.memory.sample(
+            self.batch_size
+        )
 
         targets = self.model.predict(states, verbose=0)
         next_q_values = self.target_model.predict(next_states, verbose=0)
@@ -80,7 +91,9 @@ class DQNAgent:
             if dones[i]:
                 targets[i, actions[i]] = rewards[i]
             else:
-                targets[i, actions[i]] = rewards[i] + self.gamma * np.max(next_q_values[i])
+                targets[i, actions[i]] = rewards[i] + self.gamma * np.max(
+                    next_q_values[i]
+                )
 
         self.model.fit(states, targets, epochs=1, verbose=0)
 
