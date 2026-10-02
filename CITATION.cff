@@ -3,8 +3,8 @@ message: "If you use this software, please cite it using the metadata from this 
 title: "Assistant Personnel Pour La Gestion Du Temps"
 abstract: "DQN reinforcement-learning agent that generates optimized daily schedules, trained on the ATUS time-use dataset."
 authors:
-  - family-names: "Oussous"
-    given-names: "El Hadji"
+  - family-names: "EL HADJI"
+    given-names: "Oussama"
     alias: "Bosaj"
     email: "oussousselhadji@gmail.com"
 repository-code: "https://github.com/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps"
