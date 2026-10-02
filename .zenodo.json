@@ -1,0 +1,20 @@
+{
+  "title": "Assistant Personnel Pour La Gestion Du Temps: DQN reinforcement-learning agent that generates optimized daily schedules, trained on the ATUS time-use dataset.",
+  "description": "<p>DQN reinforcement-learning agent that generates optimized daily schedules, trained on the ATUS time-use dataset.</p><p>Authored and maintained by Bosaj (El Hadji Oussous).</p>",
+  "creators": [
+    {
+      "name": "Oussous, El Hadji",
+      "affiliation": "Software Engineer & AI Researcher",
+      "orcid": ""
+    }
+  ],
+  "access_right": "open",
+  "license": "GPL-3.0-or-later",
+  "upload_type": "software",
+  "keywords": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Software Engineering",
+    "Bosaj"
+  ]
+}

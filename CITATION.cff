@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+title: "Assistant Personnel Pour La Gestion Du Temps"
+abstract: "DQN reinforcement-learning agent that generates optimized daily schedules, trained on the ATUS time-use dataset."
+authors:
+  - family-names: "Oussous"
+    given-names: "El Hadji"
+    alias: "Bosaj"
+    email: "oussousselhadji@gmail.com"
+repository-code: "https://github.com/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps"
+url: "https://github.com/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps"
+date-released: 2026-10-02
+license: "GPL-3.0-or-later"
+keywords:
+  - "ai"
+  - "software-engineering"
+  - "bosaj"
