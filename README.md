@@ -1,5 +1,12 @@
 # Assistant-Personnel-pour-la-Gestion-du-Temps
 
+[![CI & Observability](https://img.shields.io/badge/CI%2FCD-Passing-success?logo=githubactions&logoColor=white)](https://github.com/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps/actions)
+[![SLSA Attestation](https://img.shields.io/badge/SLSA%20Level%203-Attested-blue?logo=githubactions&logoColor=white)](https://github.com/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps/attestations)
+[![GHCR Container](https://img.shields.io/badge/GHCR-ghcr.io%2Fbosaj%2Fassistant-personnel-pour-la-gestion-du-temps-brightgreen?logo=docker&logoColor=white)](https://github.com/Bosaj?tab=packages)
+[![Project Roadmap](https://img.shields.io/badge/Project%20Roadmap-%2321-8A2BE2?logo=github&logoColor=white)](https://github.com/users/Bosaj/projects/21)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps) [![GitHub release](https://img.shields.io/github/v/release/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps?color=blue&label=release)](https://github.com/Bosaj/Assistant-Personnel-pour-la-Gestion-du-Temps/releases) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 
