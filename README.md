@@ -20,8 +20,9 @@
 
 ---
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Python](https://img.shields.io/badge/python-3.x-blue.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Schedule%20Optimizer-FF4B4B?style=flat&logo=streamlit&logoColor=white)](streamlit_app.py)
 
 Un agent de reinforcement learning (Deep Q-Network) qui apprend à générer un planning journalier optimisé, entraîné sur les habitudes réelles d'emploi du temps de la population américaine.
 
